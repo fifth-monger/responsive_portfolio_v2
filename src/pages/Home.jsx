@@ -4,6 +4,8 @@ export default function Home() {
   return (
     <main className="home">
       <section className="home-hero">
+        <img className="home-hero-flower" src="/images/passionflower.png" alt="" aria-hidden="true" />
+
         <p className="home-hero-label">&gt; VICTORIA_GARCIA.SYS — TEXAS COASTAL BEND</p>
         <h1 className="home-hero-heading">finds bugs for fun_ / builds things on purpose</h1>
         <p className="home-hero-subtext">
