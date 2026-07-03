@@ -1,7 +1,8 @@
 export default function Contact() {
   return (
     <main className="contact">
-      <h1>Let's <em>Build</em> Together</h1>
+      <p className="page-breadcrumb">&gt; ping victoria</p>
+      <h1>Let's <em className="serif-accent">Build</em> Together</h1>
       <h3>Have a project in mind? Let's make it happen!</h3>
 
       <div className="contact-grid">

@@ -1,7 +1,7 @@
 export default function Work() {
   const projects = [
     {
-      img: '/images/stromata.png',
+      img: '/images/stromata.webp',
       alt: 'Stromata weather app',
       title: 'Stromata',
       stack: 'React · Axios · OpenWeatherMap API · Netlify',
@@ -11,7 +11,7 @@ export default function Work() {
       label: 'Launch Stromata →',
     },
     {
-      img: '/images/mezcalarchive.png',
+      img: '/images/mezcalarchive.webp',
       alt: 'The Mezcal Archive',
       title: 'The Mezcal Archive',
       stack: 'HTML · CSS · Bootstrap · Netlify',
@@ -54,7 +54,8 @@ export default function Work() {
 
   return (
     <main className="work">
-      <h1>Take a look at everything I've been building!</h1>
+      <p className="page-breadcrumb">&gt; ls ~/projects</p>
+      <h1>Things I've <em className="serif-accent">Built</em></h1>
       <div className="project-grid">
         {projects.map((project) => (
           <div className="project-card" key={project.title}>

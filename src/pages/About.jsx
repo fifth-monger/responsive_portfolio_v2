@@ -5,7 +5,8 @@ export default function About() {
     <main className="about">
       <div className="about-grid">
         <div className="about-intro">
-          <h1>About me</h1>
+          <p className="page-breadcrumb">&gt; cd ~/about</p>
+          <h1>About <em className="serif-accent">Me</em></h1>
           <h3>Builder of Things. Breaker of Bugs.</h3>
           <p>
             I build interfaces that work and look like they mean it. Based in Coastal Bend, Texas,

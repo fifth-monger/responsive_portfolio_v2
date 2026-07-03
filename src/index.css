@@ -1,3 +1,5 @@
+/* ===== 1. RESET & DESIGN TOKENS ===== */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -10,22 +12,36 @@
   --text-primary: #3A3528;
   --text-secondary: #7A7560;
   --accent: #6B7A5E;
-  --accent-light: #D8DCC4;
   --accent-gold: #C9A86A;
   --accent-lavender: #C2B8D9;
   --accent-evergreen: #4F8F3B;
   --card-bg: #FFFDF8;
   --border: #D8DCC4;
-  --bg-nav: #EFE7D8;
+  --bg-nav: #D8DCC4;
+
+  --home-bg: #1C2018;
+  --home-phosphor: #A8E6A8;
+  --home-phosphor-dim: #8FAE8F;
+  --home-moss: #3D5A3D;
 
   --font-serif: 'Lora', Georgia, 'Times New Roman', serif;
   --font-mono: 'Space Mono', monospace;
 }
 
+/* ===== 2. BASE ELEMENTS ===== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-mono);
+  color: var(--text-primary);
+  font-weight: 700;
+  line-height: 1.25;
+  font-size: clamp(1.5rem, 3vw, 3rem);
+}
+
 body {
   background-color: var(--bg);
   color: var(--text-secondary);
-  font-family: var(--font-mono);
+  font-family: var(--font-serif);
   line-height: 1.6;
 }
 
@@ -43,48 +59,31 @@ body {
   flex-shrink: 0;
 }
 
-/* Home gradient anchored to the BOTTOM (`to top`, px measured from the page bottom).
-   Everything below the hero (footer, gap, project 3, project 2) has viewport-independent
-   pixel heights, so parchment pins exactly over the footer + last project, the green band
-   pins over the first two projects, and the dark->parchment resolve falls in the empty gap
-   between rows. The hero (farthest from the bottom) stays near-black on any viewport height.
-   Pairs with the transparent .home-footer below so the gradient flows through with no seam. */
-.app-shell.home-shell {
+.app-shell:not(.home-shell) > main {
   position: relative;
-  isolation: isolate;
-  background-image: linear-gradient(
-    to top,
-    #EFE7D8 0px,
-    #EFE7D8 740px,
-    #A9CE92 795px,
-    #6FB05A 845px,
-    #5C9C4A 980px,
-    #498A39 1120px,
-    #3C6B2E 1280px,
-    #2C4D22 1470px,
-    #1F2B1C 1680px,
-    #1C2018 1880px
-  );
 }
 
-.app-shell.home-shell::before {
+.app-shell:not(.home-shell) > main::before {
   content: '';
   position: absolute;
-  inset: 0;
-  z-index: 0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  z-index: -1;
   pointer-events: none;
-  opacity: 0.4;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='%232A3F2A' stroke-width='0.5'/%3E%3C/svg%3E");
+  opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='%23C2BCAB' stroke-width='0.5'/%3E%3C/svg%3E");
   background-size: 40px 40px;
-  -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.6) 8%, rgba(0,0,0,0.6) 75%, transparent 100%);
-  mask-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.6) 8%, rgba(0,0,0,0.6) 75%, transparent 100%);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
-  color: var(--text-primary);
-  font-weight: 600;
-  line-height: 1.25;
+.page-breadcrumb {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.19em;
+  color: var(--accent);
+  margin-bottom: 1rem;
 }
 
 p {
@@ -100,7 +99,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ---------- Nav ---------- */
+/* ===== 3. NAV ===== */
 
 .site-nav {
   display: flex;
@@ -133,23 +132,26 @@ a:hover {
 .nav-links a {
   font-family: var(--font-mono);
   font-size: 0.9rem;
-  color: var(--text-secondary);
+  color: var(--text-primary);
+  opacity: 0.75;
   padding-bottom: 0.3rem;
   border-bottom: 2px solid transparent;
 }
 
 .nav-links a:hover {
-  color: var(--accent);
+  color: var(--text-primary);
+  opacity: 1;
   text-decoration: none;
 }
 
 .nav-links a.active {
-  color: var(--accent);
+  color: var(--text-primary);
+  opacity: 1;
   font-weight: 700;
   border-bottom-color: var(--accent);
 }
 
-/* ---------- Footer ---------- */
+/* ===== 4. FOOTER ===== */
 
 @keyframes footerPulse {
   0%, 100% { opacity: 1; transform: scale(1); }
@@ -192,16 +194,16 @@ a:hover {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--accent-gold);
+  background-color: var(--accent-evergreen);
   animation: footerPulse 2.4s ease-in-out infinite;
 }
 
 .status-text {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.19em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--text-primary);
 }
 
 .footer-headline {
@@ -250,19 +252,19 @@ a:hover {
 }
 
 .footer-nav-inline a:hover {
-  color: var(--accent);
+  color: var(--accent-gold);
   text-decoration: none;
 }
 
 .footer-nav-divider {
-  color: var(--border);
+  color: var(--text-secondary);
   font-size: 0.85rem;
 }
 
 .footer-label {
   font-family: var(--font-mono);
   font-size: 0.68rem;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.19em;
   text-transform: uppercase;
   color: var(--text-secondary);
 }
@@ -313,7 +315,8 @@ a:hover {
 
 .footer-bottom p {
   font-size: 0.8rem;
-  color: var(--text-secondary);
+  color: var(--text-primary);
+  opacity: 0.7;
   text-align: center;
 }
 
@@ -323,9 +326,11 @@ a:hover {
   }
 }
 
-/* ---------- About page ---------- */
+/* ===== 5. ABOUT PAGE ===== */
 
 .about {
+  position: relative;
+  z-index: 1;
   max-width: 960px;
   margin: 0 auto;
   padding: 4rem 1.5rem;
@@ -339,7 +344,6 @@ a:hover {
 }
 
 .about-intro h1 {
-  font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
@@ -390,27 +394,30 @@ a:hover {
 .about-cta a {
   font-family: var(--font-mono);
   font-weight: 700;
-  color: var(--accent);
-  border: 1px solid var(--accent-light);
+  color: var(--accent-lavender);
+  border: 1px solid var(--accent-lavender);
   border-radius: 8px;
   padding: 0.7rem 1.25rem;
 }
 
 .about-cta a:hover {
-  background-color: var(--accent-light);
+  background-color: var(--border);
+  color: var(--accent);
+  border: 1px solid var(--accent);
   text-decoration: none;
 }
 
-/* ---------- Work page ---------- */
+/* ===== 6. WORK PAGE ===== */
 
 .work {
+  position: relative;
+  z-index: 1;
   max-width: 1100px;
   margin: 0 auto;
   padding: 4rem 1.5rem;
 }
 
 .work h1 {
-  font-size: 2.25rem;
   max-width: 700px;
   margin-bottom: 3rem;
 }
@@ -448,7 +455,7 @@ a:hover {
 .project-image-overlay {
   position: absolute;
   inset: 0;
-  background-color: var(--accent-lavender);
+  background-color: var(--bg);
   opacity: 0.6;
   transition: opacity 0.3s ease;
   pointer-events: none;
@@ -480,7 +487,7 @@ a:hover {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--accent);
-  background-color: var(--accent-light);
+  background-color: var(--border);
   border-radius: 8px;
   padding: 0.3rem 0.7rem;
   margin-bottom: 0.9rem;
@@ -499,21 +506,14 @@ a:hover {
   color: var(--accent);
 }
 
-/* ---------- Contact page ---------- */
+/* ===== 7. CONTACT PAGE ===== */
 
 .contact {
+  position: relative;
+  z-index: 1;
   max-width: 960px;
   margin: 0 auto;
   padding: 4rem 1.5rem;
-}
-
-.contact h1 {
-  font-size: 2.5rem;
-}
-
-.contact h1 em {
-  font-style: italic;
-  color: var(--accent-lavender);
 }
 
 .contact > h3 {
@@ -597,7 +597,7 @@ a:hover {
 .form-field input:focus,
 .form-field textarea:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-light);
+  box-shadow: 0 0 0 3px var(--border);
 }
 
 .form-field textarea {
@@ -634,114 +634,236 @@ a:hover {
 .contact-connect-links a {
   font-family: var(--font-mono);
   color: var(--accent);
-  border: 1px solid var(--accent-light);
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 0.6rem 1.1rem;
 }
 
 .contact-connect-links a:hover {
-  background-color: var(--accent-light);
+  background-color: var(--border);
   text-decoration: none;
 }
 
-/* ---------- Home page ---------- */
+/* ===== 8. HOME: SHELL & BACKGROUND ===== */
+
+/* Desaturated dusk-to-dawn progression: near-black hero at top, muted gray-olive
+   and dusty sage through the middle, resolving to parchment at the bottom. */
+.app-shell.home-shell {
+  position: relative;
+  isolation: isolate;
+  background-image: linear-gradient( 180deg, 
+  #1C2018 0%, 
+  #1C2018 40%, 
+  #26301F 42%, 
+  #3D4A2E 53%, 
+  #5E6B4E 65%, 
+  #98A47E 76%, 
+  #C4CCB2 81%, 
+  #D8DCC4 86%, 
+  #EBECE0 92%, 
+  #F5EFE6 97%, 
+  #F5EFE6 100% 
+  );
+}
+
+.app-shell.home-shell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.7;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='%234A6B4A' stroke-width='0.5'/%3E%3C/svg%3E");
+  background-size: 40px 40px;
+  -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.5) 75%, transparent 100%);
+  mask-image: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.5) 75%, transparent 100%);
+}
+
+/* ===== 9. HOME: NAV & FOOTER OVERRIDES ===== */
 
 nav.site-nav.home-nav {
   position: relative;
   z-index: 2;
-  background-color: transparent;
+  background-color: var(--home-bg);
   border-bottom-color: rgba(168, 230, 168, 0.18);
 }
 
 .site-nav.home-nav .nav-brand {
-  color: #D6D9B8;
+  color: var(--border);
 }
 
 .site-nav.home-nav .nav-links a {
-  color: #D6D9B8;
+  color: var(--border);
 }
 
 .site-nav.home-nav .nav-links a:hover {
-  color: #A8E6A8;
+  color: var(--home-phosphor);
 }
 
 .site-nav.home-nav .nav-links a.active {
-  color: #A8E6A8;
-  border-bottom-color: #A8E6A8;
+  color: var(--home-phosphor);
+  border-bottom-color: var(--home-phosphor);
 }
 
 /* Transparent + borderless so the single shell gradient flows straight through the footer
    (it has already resolved to parchment at this point) — removes the old hard seam. */
 .site-footer.home-footer {
   background-color: transparent;
-  border-top: none;
+  border-top: 1px solid rgba(58, 53, 40, 0.25);
+  padding-top: 3rem;
+}
+.site-footer.home-footer .footer-nav-divider {
+  color: var(--text-primary);
 }
 
-.site-footer.home-footer .status-dot {
-  background-color: var(--accent-evergreen);
+.site-footer.home-footer .footer-pill {
+  border: 1px solid var(--text-primary);
+}
+.site-footer.home-footer .footer-pill:hover {
+  border: 1px solid var(--accent-gold);
 }
 
-.site-footer.home-footer .footer-email-cta {
-  border-bottom-color: var(--accent-evergreen);
-}
-
-.site-footer.home-footer .footer-email-cta:hover {
-  color: var(--accent-evergreen);
-  border-color: var(--accent-evergreen);
-}
+/* ===== 10. HOME: HERO & TERMINAL ===== */
 
 .home-hero {
   position: relative;
   z-index: 2;
-  max-width: 760px;
-  margin: 0 auto;
-  min-height: 85vh;
+  max-width: none;
+  min-height: calc(100vh - 76px);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1.5rem;
-  padding: 2rem 1.5rem;
-  background: transparent;
+  padding: 3rem 1.5rem;
 }
 
-/* Passionflower */
+.home-hero-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Passionflower — anchored to the terminal's bottom-right corner */
 .home-hero-flower {
   position: absolute;
-  bottom: -15%;
-  right: -12%;
-  width: 55%;
-  max-width: 650px;
-  opacity: 0.85;
+  bottom: -75px;
+  right: -50px;
+  width: 220px;
+  max-width: none;
+  opacity: 0.9;
   pointer-events: none;
-  z-index: 1;
+  z-index: 3;
+}
+
+@media (max-width: 800px) {
+  .home-hero-flower {
+    width: 130px;
+    bottom: -35px;
+    right: -15px;
+  }
+  .terminal-body {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+  .terminal-title {
+    font-size: 0.75rem;
+  }
+}
+.terminal-window {
+  background: rgba(12, 16, 10, 0.75);
+  border: 1px solid var(--home-moss);
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(2px);
+}
+
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: rgba(30, 38, 26, 0.9);
+  border-bottom: 1px solid var(--home-moss);
+}
+
+.terminal-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--home-moss);
+}
+
+.terminal-dot:nth-child(1) {
+  background: #6B4A4A;
+}
+
+.terminal-dot:nth-child(2) {
+  background: #6B6B4A;
+}
+
+.terminal-title {
+  font-family: var(--font-mono);
+
+  color: var(--home-phosphor-dim);
+  margin-left: 0.75rem;
+}
+
+.terminal-body {
+  font-size: 1.25rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cursor {
+  animation: blink 1.1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor {
+    animation: none;
+  }
 }
 
 /* Text content sits above the passionflower */
-.home-hero > *:not(.home-hero-flower) {
-  position: relative;
-  z-index: 2;
-}
 
 .home-hero-label {
   font-family: var(--font-mono);
   font-size: 0.78rem;
-  letter-spacing: 0.12em;
-  color: #A8E6A8;
+  letter-spacing: 0.19em;
+  color: var(--home-phosphor);
 }
 
 .home-hero-heading {
   font-family: var(--font-mono);
-  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-size: clamp(1.6rem, 3.5vw, 3rem);
   line-height: 1.25;
-  color: #A8E6A8;
+  color: var(--home-phosphor);
   font-weight: 700;
+  max-width: 25ch;
+}
+.serif-accent {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 700;
+  color: var(--accent-lavender);
 }
 
 .home-hero-subtext {
   font-family: var(--font-mono);
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.75;
-  color: #8FAE8F;
+  color: var(--home-phosphor-dim);
   max-width: 50ch;
 }
 
@@ -754,7 +876,7 @@ nav.site-nav.home-nav {
 
 .home-btn {
   font-family: var(--font-mono);
-  font-size: 0.9rem;
+  font-size: 1.20rem;
   font-weight: 700;
   padding: 0.75rem 1.4rem;
   border-radius: 4px;
@@ -768,7 +890,7 @@ nav.site-nav.home-nav {
 .home-btn-primary {
   background-color: rgba(20, 38, 20, 0.55);
   border: 1px solid #7FBF7F;
-  color: #A8E6A8;
+  color: var(--home-phosphor);
 }
 
 .home-btn-primary:hover {
@@ -778,112 +900,250 @@ nav.site-nav.home-nav {
 .home-btn-secondary {
   background-color: transparent;
   border: 1px solid #5C7A5C;
-  color: #8FAE8F;
+  color: var(--home-phosphor-dim);
 }
 
 .home-btn-secondary:hover {
-  border-color: #A8E6A8;
-  color: #A8E6A8;
+  border-color: var(--home-phosphor);
+  color: var(--home-phosphor);
 }
 
-/* Rhythm: distinct label->first-project spacing vs. an even, larger project->project beat,
-   with generous bottom runway into the footer. (Replaces the single uniform gap: 5rem.) */
+/* ===== 11. HOME: STACK TICKER ===== */
+
+.home-stack {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin-bottom: auto;
+  padding: 1rem;;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 1rem 2rem;
+  border-top: 1px solid rgba(214, 217, 184, 0.18);
+  border-bottom: 1px solid rgba(214, 217, 184, 0.18);
+}
+
+.home-stack-prompt {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: var(--home-phosphor);
+}
+
+.home-stack-viewport {
+  flex: 1;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 6%, black 94%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, black 6%, black 94%, transparent 100%);
+}
+
+.home-stack-list {
+  list-style: none;
+  display: flex;
+  width: max-content;
+  animation: stackScroll 30s linear infinite;
+}
+
+.home-stack-list li {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--border);
+  white-space: nowrap;
+}
+
+.home-stack-list li + li::before {
+  content: '·';
+  margin: 0 1.1rem;
+  color: rgba(168, 201, 138, 0.5);
+}
+
+@keyframes stackScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.home-stack-viewport:hover .home-stack-list {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-stack-list {
+    animation: none;
+    flex-wrap: wrap;
+  }
+  .home-stack-list li[aria-hidden] {
+    display: none;
+  }
+}
+
+/* ===== 12. HOME: FEATURED PROJECTS ===== */
+
 .home-featured {
   position: relative;
   z-index: 1;
-  max-width: 1100px;
+  max-width: 860px;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem 8rem;
+  padding: 4rem 1.5rem;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .home-featured-label {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
   font-family: var(--font-mono);
   font-size: 0.85rem;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.19em;
   text-transform: uppercase;
   font-weight: 700;
+  color: var(--home-phosphor-dim);
   margin-bottom: 3.5rem;
 }
 
-.home-project {
+.home-featured-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--home-phosphor-dim);
+}
+
+.home-entry {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 2.5rem;
   align-items: center;
   margin-bottom: 7rem;
 }
 
-.home-project:last-child {
-  margin-bottom: 0;
+.home-entry-date {
+  position: absolute;
+  bottom: 1rem;
+  left: -1.6rem;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: var(--font-serif);
+  font-size: 0.75rem;
+  letter-spacing: 0.19em;
+  color: var(--home-phosphor);
 }
 
-.home-project-reverse .home-project-media {
-  order: 2;
+.home-entry-media {
+  position: relative;
+  overflow: visible;
+  border-radius: 8px;
+  border: 1px solid rgba(214, 217, 184, 0.15);
 }
 
-.home-project-reverse .home-project-copy {
-  order: 1;
-}
-
-.home-project-media img {
+.home-entry-media img {
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
-  border-radius: 8px;
-  display: block;
+  filter: saturate(0.7);
+  transition: filter 0.3s ease;
+  border-radius: 6px;
 }
 
-.home-project-copy h3 {
+.home-entry-media:hover img {
+  filter: saturate(1);
+}
+
+.home-entry-copy h3 {
   font-size: 1.8rem;
+  color: var(--home-phosphor);
   margin-bottom: 0.85rem;
 }
 
-.home-project-copy p {
+.home-entry-copy p {
   font-size: 1rem;
   line-height: 1.8;
+  color: var(--bg-nav);
   margin-bottom: 1.25rem;
 }
 
-.home-project-copy a {
+.home-entry-link {
   font-family: var(--font-mono);
   font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--home-phosphor);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
-
-/* Upper/mid section — sits over the olive/gold band of the gradient */
-.home-tone-light.home-featured-label {
-  color: #D6D9B8;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
-}
-
-.home-project.home-tone-light .home-project-copy h3,
-.home-project.home-tone-light .home-project-copy p,
-.home-project.home-tone-light .home-project-copy a {
-  color: #D6D9B8;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
-}
-
-/* Lower section — background has resolved to parchment, match the rest of the site */
-.home-project.home-tone-dark .home-project-copy h3 {
+.home-see-all {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.25rem;
   color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.home-project.home-tone-dark .home-project-copy p {
+.home-entry-link:hover,
+.home-see-all:hover {
+  text-decoration: none;
   color: var(--text-secondary);
 }
 
-.home-project.home-tone-dark .home-project-copy a {
-  color: var(--accent);
+.home-entry-link::after,
+.home-see-all::after {
+  content: '→';
+  transition: transform 0.2s ease;
+}
+
+.home-entry-link:hover::after,
+.home-see-all:hover::after {
+  transform: translateX(5px);
+}
+
+.home-see-all {
+  margin: 1rem 0 3rem;
+}
+
+@media (max-width: 800px) {
+  .home-entry {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .home-entry-index {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 800px) {
   .home-project {
     grid-template-columns: 1fr;
   }
+}
 
-  .home-project-reverse .home-project-media,
-  .home-project-reverse .home-project-copy {
-    order: 0;
-  }
+/* ===== 13. HOME: SCROLL SNAP ===== */
+
+html:has(.home-shell) {
+  scroll-snap-type: y mandatory;
+}
+
+/* remove scroll-snap-align and scroll-snap-stop from .home-hero (or .home) */
+
+.site-nav.home-nav {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.home-stack {
+  scroll-snap-align: start;
+}
+
+.home-featured {
+  scroll-snap-align: start;
+}
+
+.site-footer.home-footer {
+  scroll-snap-align: end;
 }

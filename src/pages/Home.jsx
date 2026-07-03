@@ -4,72 +4,82 @@ export default function Home() {
   return (
     <main className="home">
       <section className="home-hero">
-        <img className="home-hero-flower" src="/images/passionflower.png" alt="" aria-hidden="true" />
+        
 
-        <p className="home-hero-label">&gt; VICTORIA_GARCIA.SYS — TEXAS COASTAL BEND</p>
-        <h1 className="home-hero-heading">finds bugs for fun_ / builds things on purpose</h1>
-        <p className="home-hero-subtext">
-          Front-end developer building interfaces that work and look like they mean it —
-          React, JavaScript, and an eye for design.
-        </p>
-        <div className="home-hero-actions">
-          <Link className="home-btn home-btn-primary" to="/work">[view_work]</Link>
-          <Link className="home-btn home-btn-secondary" to="/contact">[contact]</Link>
+        <div className="home-hero-inner">
+          <div className="terminal-window">
+
+            <div className="terminal-bar">
+              <span className="terminal-dot"></span>
+              <span className="terminal-dot"></span>
+              <span className="terminal-dot"></span>
+              <span className="terminal-title">victoria@coastalbend:~$</span>
+            </div>
+           
+            <div className="terminal-body">
+              
+              <p className="home-hero-label">&gt; VICTORIA_GARCIA.SYS — TEXAS COASTAL BEND</p>
+              <h1 className="home-hero-heading">finds bugs for fun<span className="cursor">_</span> / builds things <em className="serif-accent">on purpose</em></h1>
+              <p className="home-hero-subtext">
+                Front-end developer building interfaces that work and look like they mean it —
+                React, JavaScript, and an eye for design.
+              </p>
+              <div className="home-hero-actions">
+                <Link className="home-btn home-btn-primary" to="/work">[view_work]</Link>
+                <Link className="home-btn home-btn-secondary" to="/contact">[contact]</Link>
+              </div>
+            </div>
+          </div>
+           <img className="home-hero-flower" src="/images/passionflower.webp" alt="" aria-hidden="true" />
         </div>
       </section>
+      
 
       <section className="home-featured">
-        <p className="home-featured-label home-tone-light">Featured Work</p>
-
-        <div className="home-project home-tone-light">
-          <div className="home-project-media">
-            <img src="/images/stromata.png" alt="Stromata weather app" />
+        <section className="home-stack">
+          <span className="home-stack-prompt">$ stack</span>
+          <div className="home-stack-viewport">
+            <ul className="home-stack-list">
+              <li>React</li>
+              <li>JavaScript</li>
+              <li>HTML/CSS</li>
+              <li>Tailwind CSS</li>
+              <li>SQL</li>
+              <li>Supabase</li>
+              <li>Netlify</li>
+              <li>Git</li>
+              <li>Claude Code</li>
+              <li aria-hidden="true">React</li>
+              <li aria-hidden="true">JavaScript</li>
+              <li aria-hidden="true">HTML/CSS</li>
+              <li aria-hidden="true">Tailwind CSS</li>
+              <li aria-hidden="true">SQL</li>
+              <li aria-hidden="true">Supabase</li>
+              <li aria-hidden="true">Netlify</li>
+              <li aria-hidden="true">Git</li>
+              <li aria-hidden="true">Claude Code</li>
+            </ul>
           </div>
-          <div className="home-project-copy">
-            <h3>Stromata</h3>
+        </section>
+        <p className="home-featured-label home-tone-light">Latest Work</p>
+
+        <article className="home-entry">
+          
+          <div className="home-entry-media">
+            <span className="home-entry-date">06.2026</span>
+            <img src="/images/hemingway.png" alt="Hemingway Nursery Project" />
+          </div>
+          <div className="home-entry-copy">
+            <h3>Hemingway Nursery Project</h3>
             <p>
-              A real-time weather app with a dark biopunk aesthetic. Built with React and Axios,
-              it displays live conditions, forecasts, and dynamic backgrounds that shift based on
-              current weather state.
+              A full production site for a family-run daylily nursery, built solo as a freelance project. React frontend paired with a Square catalog of 371 products, plus DNS migration, email routing, and SEO, scoped, built, and shipped for a paying client.
             </p>
-            <a href="https://stromata.netlify.app" target="_blank" rel="noreferrer">
-              Launch Stromata →
+            <a className="home-entry-link" href="https://stromata.netlify.app" target="_blank" rel="noreferrer">
+              Visit site
             </a>
           </div>
-        </div>
-
-        <div className="home-project home-project-reverse home-tone-light">
-          <div className="home-project-media">
-            <img src="/images/epitome.png" alt="epi.tome dictionary app" />
-          </div>
-          <div className="home-project-copy">
-            <h3>epi.tome</h3>
-            <p>
-              A cyberpunk-styled dictionary app powered by the Free Dictionary API. Features word
-              definitions, phonetics, audio pronunciation, and part-of-speech filtering — built
-              with React and designed with a dark editorial aesthetic.
-            </p>
-            <a href="https://epi-tome.netlify.app" target="_blank" rel="noreferrer">
-              Launch epi.tome →
-            </a>
-          </div>
-        </div>
-
-        <div className="home-project home-tone-dark">
-          <div className="home-project-media">
-            <img src="/images/mezcalarchive.png" alt="The Mezcal Archive" />
-          </div>
-          <div className="home-project-copy">
-            <h3>The Mezcal Archive</h3>
-            <p>
-              A personal editorial site about mezcal and agave spirits — combining cultural depth,
-              research, and a strong visual voice rooted in tradition.
-            </p>
-            <a href="https://mezcalarchive.netlify.app" target="_blank" rel="noreferrer">
-              Visit the Archive →
-            </a>
-          </div>
-        </div>
+        </article>
+        <Link className="home-see-all" to="/work">See all projects</Link>
       </section>
     </main>
   )

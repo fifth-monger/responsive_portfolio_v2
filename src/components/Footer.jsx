@@ -47,7 +47,7 @@ export default function Footer() {
 
             <div className="footer-location">
               <div className="footer-label">Based in</div>
-              <div className="footer-location-value">Texas Coastal Bend — 27.80° N</div>
+              <div className="footer-location-value">Texas Coastal Bend — 27.8° N, 97.3° W</div>
             </div>
           </div>
         </div>
