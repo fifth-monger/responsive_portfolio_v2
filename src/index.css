@@ -1061,7 +1061,7 @@ nav.site-nav.home-nav {
 }
 
 .home-entry-copy p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.8;
   color: var(--bg-nav);
   margin-bottom: 1.25rem;
@@ -1070,7 +1070,7 @@ nav.site-nav.home-nav {
 .home-entry-link {
   font-family: var(--font-mono);
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--home-phosphor);
   display: inline-flex;
   align-items: center;
