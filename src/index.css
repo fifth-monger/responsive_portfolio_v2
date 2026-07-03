@@ -1088,12 +1088,11 @@ nav.site-nav.home-nav {
 
 .home-entry-link:hover {
   text-decoration: none;
-  color: var(--accent-gold);
+  color: #E8FFE8;
 }
 
 .home-see-all:hover {
-  color: var(--text-primary);
-  text-decoration: underline;
+  color: var(--accent-evergreen);
 }
 
 .home-entry-link::after,
