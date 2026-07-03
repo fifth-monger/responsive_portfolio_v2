@@ -14,6 +14,8 @@
   --accent: #6B7A5E;
   --accent-gold: #C9A86A;
   --accent-lavender: #C2B8D9;
+  --accent-lavender-heading: #7E6FA8;
+  --accent-lavender-deep: #756399;
   --accent-evergreen: #4F8F3B;
   --card-bg: #FFFDF8;
   --border: #D8DCC4;
@@ -394,8 +396,8 @@ a:hover {
 .about-cta a {
   font-family: var(--font-mono);
   font-weight: 700;
-  color: var(--accent-lavender);
-  border: 1px solid var(--accent-lavender);
+  color: var(--accent-lavender-deep);
+  border: 1px solid var(--accent-lavender-deep);
   border-radius: 8px;
   padding: 0.7rem 1.25rem;
 }
@@ -609,7 +611,7 @@ a:hover {
   font-weight: 700;
   font-size: 0.95rem;
   color: var(--card-bg);
-  background-color: var(--accent-lavender);
+  background-color: var(--accent-lavender-deep);
   border: none;
   border-radius: 8px;
   padding: 0.75rem 1.5rem;
@@ -858,6 +860,10 @@ nav.site-nav.home-nav {
   font-style: italic;
   font-weight: 700;
   color: var(--accent-lavender);
+}
+
+.app-shell:not(.home-shell) .serif-accent {
+  color: var(--accent-lavender-heading);
 }
 
 .home-hero-subtext {
