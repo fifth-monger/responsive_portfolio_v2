@@ -734,6 +734,7 @@ nav.site-nav.home-nav {
   flex-direction: column;
   justify-content: center;
   padding: 3rem 1.5rem;
+  overflow-x: clip;
 }
 
 .home-hero-inner {
