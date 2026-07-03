@@ -1,0 +1,8 @@
+dist/
+*.webp
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.md
+index.html

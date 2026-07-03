@@ -1,0 +1,112 @@
+{
+  ".claude/settings.local.json": {
+    "mtime": 1783023205.6630285,
+    "ast_hash": "70fb6c64ad7465c6ad55a2646a0cd315",
+    "semantic_hash": "70fb6c64ad7465c6ad55a2646a0cd315"
+  },
+  "package.json": {
+    "mtime": 1782762446.6972485,
+    "ast_hash": "25ff78fe4c5097a8d79e11c16565a070",
+    "semantic_hash": "25ff78fe4c5097a8d79e11c16565a070"
+  },
+  "src/App.jsx": {
+    "mtime": 1782836083.1505578,
+    "ast_hash": "cffd8a18e563a5f0df57e661282e8895",
+    "semantic_hash": "cffd8a18e563a5f0df57e661282e8895"
+  },
+  "src/components/Footer.jsx": {
+    "mtime": 1783042386.988736,
+    "ast_hash": "00395038eba0a61b268e573bc0e40813",
+    "semantic_hash": "00395038eba0a61b268e573bc0e40813"
+  },
+  "src/components/Nav.jsx": {
+    "mtime": 1782835628.8659945,
+    "ast_hash": "6a5c877c0b17c66ed987fabef2814f71",
+    "semantic_hash": "6a5c877c0b17c66ed987fabef2814f71"
+  },
+  "src/main.jsx": {
+    "mtime": 1782762453.426571,
+    "ast_hash": "e13723e2574429d9a6d849727e3ff695",
+    "semantic_hash": "e13723e2574429d9a6d849727e3ff695"
+  },
+  "src/pages/About.jsx": {
+    "mtime": 1783036525.7504976,
+    "ast_hash": "e238747b90b70fd6d2c100c1b7645066",
+    "semantic_hash": "e238747b90b70fd6d2c100c1b7645066"
+  },
+  "src/pages/Contact.jsx": {
+    "mtime": 1783036666.782929,
+    "ast_hash": "0dd121fd44e4af5d7d2c9ef47d7cc4f8",
+    "semantic_hash": "0dd121fd44e4af5d7d2c9ef47d7cc4f8"
+  },
+  "src/pages/Home.jsx": {
+    "mtime": 1783044310.730801,
+    "ast_hash": "6b8f901089d59fe9cda3ed6328ff9db4",
+    "semantic_hash": "6b8f901089d59fe9cda3ed6328ff9db4"
+  },
+  "src/pages/Work.jsx": {
+    "mtime": 1783036564.3380115,
+    "ast_hash": "2c5d910c66ec3103851dc79058e155df",
+    "semantic_hash": "2c5d910c66ec3103851dc79058e155df"
+  },
+  "vite.config.js": {
+    "mtime": 1782762447.726487,
+    "ast_hash": "9bf09b6d97edba4eebf0fe93baaad662",
+    "semantic_hash": "9bf09b6d97edba4eebf0fe93baaad662"
+  },
+  "index.html": {
+    "mtime": 1782828908.175783,
+    "ast_hash": "bdb18b2b78b3e19b422d344a0c0c0350",
+    "semantic_hash": ""
+  },
+  "public/VGarcia Resume 2026.pdf": {
+    "mtime": 1782784419.637337,
+    "ast_hash": "3a2e9e2206547f97592b36fcbcee87fb",
+    "semantic_hash": ""
+  },
+  "public/images/epitome.png": {
+    "mtime": 1782784419.6341805,
+    "ast_hash": "71265f1368951e3bab823380552a7742",
+    "semantic_hash": ""
+  },
+  "public/images/hemingway.png": {
+    "mtime": 1783034020.7478743,
+    "ast_hash": "33110ad63c92d7ef30af4df378bc4cbf",
+    "semantic_hash": ""
+  },
+  "public/images/mezcalarchive.webp": {
+    "mtime": 1783022510.6495214,
+    "ast_hash": "988ee13d256e43c62032f715f214496a",
+    "semantic_hash": ""
+  },
+  "public/images/passionflower.webp": {
+    "mtime": 1783022510.9482234,
+    "ast_hash": "bac3cef1cd8d49b5cb33d5b9747b0c4a",
+    "semantic_hash": ""
+  },
+  "public/images/poem_generator.png": {
+    "mtime": 1782784419.632551,
+    "ast_hash": "54d7bb7b553a9126e50d1ef4b1cef4a2",
+    "semantic_hash": ""
+  },
+  "public/images/prideofbarbados.webp": {
+    "mtime": 1783022511.666903,
+    "ast_hash": "d3aa98f05cff08235f7e28a0643a6a42",
+    "semantic_hash": ""
+  },
+  "public/images/stromata.webp": {
+    "mtime": 1783022511.7075994,
+    "ast_hash": "0d98eaf6ea5ccb892a06e13497ed7561",
+    "semantic_hash": ""
+  },
+  "public/images/victoria.jpeg": {
+    "mtime": 1782784419.6242676,
+    "ast_hash": "e4dafb7d9acc0e775d4c66c02f5dd3a0",
+    "semantic_hash": ""
+  },
+  "public/images/weather_widget.png": {
+    "mtime": 1782784419.6256871,
+    "ast_hash": "76465438b5439b351feea7150541c5e1",
+    "semantic_hash": ""
+  }
+}
