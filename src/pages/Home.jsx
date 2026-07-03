@@ -67,7 +67,7 @@ export default function Home() {
           
           <div className="home-entry-media">
             <span className="home-entry-date">06.2026</span>
-            <img src="/images/hemingway.png" alt="Hemingway Nursery Project" />
+            <img src="/images/hemingway.webp" alt="Hemingway Nursery Project" />
           </div>
           <div className="home-entry-copy">
             <h3>Hemingway Nursery Project</h3>
