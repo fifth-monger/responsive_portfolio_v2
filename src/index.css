@@ -922,7 +922,7 @@ nav.site-nav.home-nav {
   z-index: 1;
   max-width: 860px;
   margin-bottom: auto;
-  padding: 1rem;;
+  padding: 1rem;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
@@ -1128,15 +1128,6 @@ nav.site-nav.home-nav {
   .home-entry {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-  }
-  .home-entry-index {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 800px) {
-  .home-project {
-    grid-template-columns: 1fr;
   }
 }
 
