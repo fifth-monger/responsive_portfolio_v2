@@ -1086,10 +1086,14 @@ nav.site-nav.home-nav {
   gap: 0.5rem;
 }
 
-.home-entry-link:hover,
-.home-see-all:hover {
+.home-entry-link:hover {
   text-decoration: none;
   color: var(--accent-gold);
+}
+
+.home-see-all:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
 }
 
 .home-entry-link::after,
