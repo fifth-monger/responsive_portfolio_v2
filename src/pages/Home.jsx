@@ -74,7 +74,7 @@ export default function Home() {
             <p>
               A full production site for a family-run daylily nursery, built solo as a freelance project. React frontend paired with a Square catalog of 371 products, plus DNS migration, email routing, and SEO, scoped, built, and shipped for a paying client.
             </p>
-            <a className="home-entry-link" href="https://stromata.netlify.app" target="_blank" rel="noreferrer">
+            <a className="home-entry-link" href="https://hemingwaynursery.com/" target="_blank" rel="noreferrer">
               Visit site
             </a>
           </div>
