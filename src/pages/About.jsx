@@ -28,9 +28,24 @@ export default function About() {
         <div className="about-sidebar">
           <img src="/images/victoria.jpeg" alt="Victoria headshot" />
           <h3>Technologies</h3>
-          <p>JavaScript · React · HTML/CSS · Git · REST APIs · Axios · SQL</p>
+          <div className="about-tag-list">
+            <span className="project-tag">JavaScript</span>
+            <span className="project-tag">React</span>
+            <span className="project-tag">HTML/CSS</span>
+            <span className="project-tag">Git</span>
+            <span className="project-tag">REST APIs</span>
+            <span className="project-tag">Axios</span>
+            <span className="project-tag">SQL</span>
+          </div>
           <h3>Tools</h3>
-          <p>VS Code · GitHub · Git · Netlify · macOS · MacBook Air M4</p>
+          <div className="about-tag-list">
+            <span className="project-tag">VS Code</span>
+            <span className="project-tag">GitHub</span>
+            <span className="project-tag">Git</span>
+            <span className="project-tag">Netlify</span>
+            <span className="project-tag">macOS</span>
+            <span className="project-tag">MacBook Air M4</span>
+          </div>
         </div>
       </div>
 

@@ -495,6 +495,17 @@ a:hover {
   margin-bottom: 0.9rem;
 }
 
+.about-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-tag-list .project-tag {
+  margin-bottom: 0;
+}
+
 .project-card p.project-description {
   font-size: 0.95rem;
   line-height: 1.7;
