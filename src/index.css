@@ -155,6 +155,78 @@ a:hover {
   border-bottom-color: var(--accent);
 }
 
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggle-bar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-primary);
+}
+
+.site-nav.home-nav .nav-toggle-bar {
+  background-color: var(--border);
+}
+
+@media (max-width: 600px) {
+  .site-nav {
+    position: relative;
+    z-index: 5;
+    flex-wrap: nowrap;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 1rem 1rem;
+    background-color: var(--bg-nav);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-links.nav-links-open {
+    display: flex;
+  }
+
+  .nav-links a {
+    display: block;
+    font-size: 0.85rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(58, 53, 40, 0.1);
+  }
+
+  .nav-links li:last-child a {
+    border-bottom: none;
+  }
+
+  .site-nav.home-nav .nav-links {
+    background-color: var(--home-bg);
+    border-bottom: 1px solid rgba(168, 230, 168, 0.18);
+  }
+
+  .site-nav.home-nav .nav-links a {
+    border-bottom-color: rgba(168, 230, 168, 0.12);
+  }
+}
+
 /* ===== 4. FOOTER ===== */
 
 @keyframes footerPulse {
@@ -740,7 +812,7 @@ a:hover {
 
 nav.site-nav.home-nav {
   position: relative;
-  z-index: 2;
+  z-index: 5;
   background-color: var(--home-bg);
   border-bottom-color: rgba(168, 230, 168, 0.18);
 }
@@ -1232,13 +1304,8 @@ html:has(.home-shell) {
   .site-nav {
     padding: 1.5rem 1rem;
     gap: 0.5rem;
-    flex-wrap: nowrap;
   }
   .nav-brand {
     font-size: 0.85rem;
   }
-  .nav-links a {
-    font-size: 0.7rem;
-  }
-  .nav-links { gap: 0.4rem 0.6rem; }
 }
