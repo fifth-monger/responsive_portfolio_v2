@@ -1188,6 +1188,11 @@ nav.site-nav.home-nav {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
+  .home-featured {
+    min-height: auto;
+    justify-content: flex-start;
+  }
 }
 
 /* ===== 13. HOME: SCROLL SNAP ===== */
