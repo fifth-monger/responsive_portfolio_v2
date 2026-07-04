@@ -549,6 +549,12 @@ a:hover {
   flex: 1;
 }
 
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
 .project-card a.project-link {
   font-family: var(--font-mono);
   font-weight: 700;

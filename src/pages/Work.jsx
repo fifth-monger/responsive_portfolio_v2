@@ -19,6 +19,7 @@ export default function Work() {
         'A real-time weather app with a dark biopunk aesthetic. Displays live conditions, forecasts, and dynamic backgrounds by weather state.',
       url: 'https://stromata.netlify.app',
       label: 'Launch Stromata →',
+      github: 'https://github.com/fifth-monger/weather-react-w4',
     },
     {
       img: '/images/mezcalarchive.webp',
@@ -29,6 +30,7 @@ export default function Work() {
         'A personal editorial site about mezcal and agave spirits — combining cultural depth, research, and a strong visual voice rooted in tradition.',
       url: 'https://mezcalarchive.netlify.app',
       label: 'Visit the Archive →',
+      github: 'https://github.com/fifth-monger/ra_mezcal_project',
     },
     {
       img: '/images/epitome.png',
@@ -39,6 +41,7 @@ export default function Work() {
         'A cyberpunk-styled dictionary app with word definitions, phonetics, audio pronunciation, and part-of-speech filtering.',
       url: 'https://epi-tome.netlify.app',
       label: 'Launch epi.tome →',
+      github: 'https://github.com/fifth-monger/dictionary-react-project',
     },
     {
       img: '/images/weather_widget.png',
@@ -49,6 +52,7 @@ export default function Work() {
         'Real-time weather app with a custom kawaii aesthetic. Renders live temperature, humidity, and wind data dynamically.',
       url: 'https://kawaiiweather.netlify.app',
       label: 'Launch Widget →',
+      github: 'https://github.com/fifth-monger/kawaii-weather-widget',
     },
     {
       img: '/images/poem_generator.png',
@@ -59,6 +63,7 @@ export default function Work() {
         'An AI-powered app that takes a user-submitted theme and generates a custom poem. Clean UI with seamless API integration.',
       url: 'https://upliftingpoemgenerator.netlify.app',
       label: 'Launch Generator →',
+      github: 'https://github.com/fifth-monger/poem-generator',
     },
   ]
 
@@ -77,9 +82,16 @@ export default function Work() {
               <h3>{project.title}</h3>
               <span className="project-tag">{project.stack}</span>
               <p className="project-description">{project.description}</p>
-              <a className="project-link" href={project.url} target="_blank" rel="noreferrer">
-                {project.label}
-              </a>
+              <div className="project-links">
+                <a className="project-link" href={project.url} target="_blank" rel="noreferrer">
+                  {project.label}
+                </a>
+                {project.github && (
+                  <a className="project-link" href={project.github} target="_blank" rel="noreferrer">
+                    View code →
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         ))}
