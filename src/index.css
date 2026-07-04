@@ -983,7 +983,7 @@ nav.site-nav.home-nav {
   position: relative;
   z-index: 1;
   max-width: 860px;
-  margin-bottom: auto;
+  margin-bottom: 2rem;
   padding: 1rem;
   display: flex;
   flex-wrap: wrap;
