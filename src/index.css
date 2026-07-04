@@ -1269,6 +1269,12 @@ nav.site-nav.home-nav {
     min-height: auto;
     justify-content: flex-start;
   }
+
+  .home-entry-date {
+    left: 0.5rem;
+    z-index: 1;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  }
 }
 
 /* ===== 13. HOME: SCROLL SNAP ===== */
