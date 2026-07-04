@@ -1160,7 +1160,7 @@ nav.site-nav.home-nav {
   padding: 3px 8px;
   border-radius: 3px;
   transition: background-color 0.18s ease, color 0.18s ease;
-  margin: 1rem 0 3rem;
+  margin: 0.5rem 0 3rem;
   width: fit-content;
 }
 
