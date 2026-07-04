@@ -40,24 +40,20 @@ export default function Home() {
           <span className="home-stack-prompt">$ stack</span>
           <div className="home-stack-viewport">
             <ul className="home-stack-list">
-              <li>React</li>
               <li>JavaScript</li>
+              <li>React</li>
               <li>HTML/CSS</li>
-              <li>Tailwind CSS</li>
-              <li>SQL</li>
-              <li>Supabase</li>
-              <li>Netlify</li>
               <li>Git</li>
-              <li>Claude Code</li>
-              <li aria-hidden="true">React</li>
+              <li>REST APIs</li>
+              <li>Axios</li>
+              <li>SQL</li>
               <li aria-hidden="true">JavaScript</li>
+              <li aria-hidden="true">React</li>
               <li aria-hidden="true">HTML/CSS</li>
-              <li aria-hidden="true">Tailwind CSS</li>
-              <li aria-hidden="true">SQL</li>
-              <li aria-hidden="true">Supabase</li>
-              <li aria-hidden="true">Netlify</li>
               <li aria-hidden="true">Git</li>
-              <li aria-hidden="true">Claude Code</li>
+              <li aria-hidden="true">REST APIs</li>
+              <li aria-hidden="true">Axios</li>
+              <li aria-hidden="true">SQL</li>
             </ul>
           </div>
         </section>
@@ -67,14 +63,14 @@ export default function Home() {
           
           <div className="home-entry-media">
             <span className="home-entry-date">06.2026</span>
-            <img src="/images/hemingway.png" alt="Hemingway Nursery Project" />
+            <img src="/images/hemingway.webp" alt="Hemingway Nursery Project" />
           </div>
           <div className="home-entry-copy">
             <h3>Hemingway Nursery Project</h3>
             <p>
               A full production site for a family-run daylily nursery, built solo as a freelance project. React frontend paired with a Square catalog of 371 products, plus DNS migration, email routing, and SEO, scoped, built, and shipped for a paying client.
             </p>
-            <a className="home-entry-link" href="https://stromata.netlify.app" target="_blank" rel="noreferrer">
+            <a className="home-entry-link" href="https://hemingwaynursery.com/" target="_blank" rel="noreferrer">
               Visit site
             </a>
           </div>
