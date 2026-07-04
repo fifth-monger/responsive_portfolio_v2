@@ -140,7 +140,8 @@ a:hover {
   border-bottom: 2px solid transparent;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a:focus-visible {
   color: var(--text-primary);
   opacity: 1;
   text-decoration: none;
@@ -292,7 +293,8 @@ a:hover {
   padding: 0.45rem 0.95rem;
 }
 
-.footer-pill:hover {
+.footer-pill:hover,
+.footer-pill:focus-visible {
   color: var(--accent);
   border-color: var(--accent);
   text-decoration: none;
@@ -402,7 +404,8 @@ a:hover {
   padding: 0.7rem 1.25rem;
 }
 
-.about-cta a:hover {
+.about-cta a:hover,
+.about-cta a:focus-visible {
   background-color: var(--border);
   color: var(--accent);
   border: 1px solid var(--accent);
@@ -630,7 +633,8 @@ a:hover {
   transition: opacity 0.15s ease;
 }
 
-.contact-form-panel button:hover {
+.contact-form-panel button:hover,
+.contact-form-panel button:focus-visible {
   opacity: 0.85;
 }
 
@@ -709,7 +713,8 @@ nav.site-nav.home-nav {
   color: var(--border);
 }
 
-.site-nav.home-nav .nav-links a:hover {
+.site-nav.home-nav .nav-links a:hover,
+.site-nav.home-nav .nav-links a:focus-visible {
   color: var(--home-phosphor);
 }
 
@@ -732,7 +737,8 @@ nav.site-nav.home-nav {
 .site-footer.home-footer .footer-pill {
   border: 1px solid var(--text-primary);
 }
-.site-footer.home-footer .footer-pill:hover {
+.site-footer.home-footer .footer-pill:hover,
+.site-footer.home-footer .footer-pill:focus-visible {
   border: 1px solid var(--accent-gold);
 }
 
@@ -901,7 +907,8 @@ nav.site-nav.home-nav {
   transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-.home-btn:hover {
+.home-btn:hover,
+.home-btn:focus-visible {
   text-decoration: none;
 }
 
@@ -911,7 +918,8 @@ nav.site-nav.home-nav {
   color: var(--home-phosphor);
 }
 
-.home-btn-primary:hover {
+.home-btn-primary:hover,
+.home-btn-primary:focus-visible {
   background-color: rgba(20, 38, 20, 0.85);
 }
 
@@ -921,7 +929,8 @@ nav.site-nav.home-nav {
   color: var(--home-phosphor-dim);
 }
 
-.home-btn-secondary:hover {
+.home-btn-secondary:hover,
+.home-btn-secondary:focus-visible {
   border-color: var(--home-phosphor);
   color: var(--home-phosphor);
 }
