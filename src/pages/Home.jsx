@@ -57,11 +57,9 @@ export default function Home() {
             </ul>
           </div>
         </section>
-        <p className="home-featured-label home-tone-light">Latest Work</p>
-
         <article className="home-entry">
-          
-          <div className="home-entry-media">
+          <p className="home-featured-label home-tone-light">Latest Work</p>
+           <div className="home-entry-media">
             <span className="home-entry-date">06.2026</span>
             <img src="/images/hemingway.webp" alt="Hemingway Nursery Project" />
           </div>
@@ -73,9 +71,9 @@ export default function Home() {
             <a className="home-entry-link" href="https://hemingwaynursery.com/" target="_blank" rel="noreferrer">
               Visit site
             </a>
+            <Link className="home-see-all" to="/work">See all projects</Link>
           </div>
         </article>
-        <Link className="home-see-all" to="/work">See all projects</Link>
       </section>
     </main>
   )
