@@ -884,10 +884,9 @@ nav.site-nav.home-nav {
 /* Passionflower — anchored to the terminal's bottom-right corner */
 .home-hero-flower {
   position: absolute;
-  bottom: clamp(-75px, -20px - 7vw, -46px);
-  right: clamp(-50px, 62px - 14vw, 10px);
-  width: clamp(80px, 15vw, 220px);
-  max-width: none;
+  right: clamp(-40px, 4vw, 10px);
+  bottom: clamp(-50px, 4vw, -30px);
+  width: clamp(125px, 20vw, 200px);
   opacity: 0.9;
   pointer-events: none;
   z-index: 3;
@@ -1155,7 +1154,7 @@ nav.site-nav.home-nav {
   grid-template-columns: 1.05fr 1fr;
   gap: 2.5rem;
   align-items: center;
-  margin-bottom: 7rem;
+  margin-bottom: 5rem;
 }
 
 .home-entry-date {
