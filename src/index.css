@@ -1083,6 +1083,7 @@ nav.site-nav.home-nav {
 }
 
 .home-entry {
+  position: relative;
   display: grid;
   grid-template-columns: 1.05fr 1fr;
   gap: 2.5rem;
@@ -1092,7 +1093,7 @@ nav.site-nav.home-nav {
 
 .home-entry-date {
   position: absolute;
-  bottom: 1rem;
+  bottom: 0.5rem;
   left: -1.6rem;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
