@@ -22,6 +22,7 @@ export default function Contact() {
             I'm currently open to freelance work and full-time opportunities — front-end
             focused, but happy to get my hands dirty across the stack.
           </p>
+          <p>I reply within 24hrs.</p>
         </div>
 
         <div className="contact-form-panel">
