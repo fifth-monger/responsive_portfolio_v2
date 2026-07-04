@@ -1,6 +1,16 @@
 export default function Work() {
   const projects = [
     {
+      img: '/images/hemingway.webp',
+      alt: 'Hemingway Nursery Project',
+      title: 'Hemingway Nursery Project',
+      stack: 'React · Square API · Netlify · DNS/Email migration',
+      description:
+        'A full production site for a family-run daylily nursery, built solo as a freelance project. React frontend paired with a Square catalog of 371 products, plus DNS migration, email routing, and SEO, scoped, built, and shipped for a paying client.',
+      url: 'https://hemingwaynursery.com/',
+      label: 'Visit site →',
+    },
+    {
       img: '/images/stromata.webp',
       alt: 'Stromata weather app',
       title: 'Stromata',
