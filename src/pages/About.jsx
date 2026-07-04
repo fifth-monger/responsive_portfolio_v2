@@ -10,7 +10,7 @@ export default function About() {
           <h3>Builder of Things. Breaker of Bugs.</h3>
           <p>
             I build interfaces that work and look like they mean it. Based in Coastal Bend, Texas,
-            I work in JavaScript, React.js, and Bootstrap, with an eye for design that comes from
+            I work in JavaScript and React, with an eye for design that comes from
             years of living at the intersection of creative and technical. I find bugs everywhere I
             go. I can't turn it off. Turns out that's a skill.
           </p>
@@ -28,7 +28,7 @@ export default function About() {
         <div className="about-sidebar">
           <img src="/images/victoria.jpeg" alt="Victoria headshot" />
           <h3>Technologies</h3>
-          <p>JavaScript · React.js · Bootstrap · Python · Axios · REST APIs</p>
+          <p>JavaScript · React · HTML/CSS · Git · REST APIs · Axios · SQL</p>
           <h3>Tools</h3>
           <p>VS Code · GitHub · Git · Netlify · macOS · MacBook Air M4</p>
         </div>
