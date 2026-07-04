@@ -50,7 +50,7 @@ export default function About() {
       </div>
 
       <div className="about-cta">
-        <a href="/VGarcia Resume 2026.pdf" download="Victoria-Garcia-Resume.pdf">
+        <a href="/victoria-garcia-resume-2026.pdf" download="victoria-garcia-resume-2026.pdf">
           Download Resume [ .pdf ]
         </a>
         <Link to="/work">See my projects</Link>
