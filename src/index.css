@@ -884,9 +884,9 @@ nav.site-nav.home-nav {
 /* Passionflower — anchored to the terminal's bottom-right corner */
 .home-hero-flower {
   position: absolute;
-  bottom: -75px;
-  right: -50px;
-  width: 220px;
+  bottom: clamp(-75px, -20px - 7vw, -46px);
+  right: clamp(-50px, 62px - 14vw, 10px);
+  width: clamp(80px, 15vw, 220px);
   max-width: none;
   opacity: 0.9;
   pointer-events: none;
@@ -894,11 +894,6 @@ nav.site-nav.home-nav {
 }
 
 @media (max-width: 800px) {
-  .home-hero-flower {
-    width: 80px;
-    bottom: -46px;
-    right: 10px;
-  }
   .terminal-body {
     padding: 1.5rem;
     font-size: 1rem;
