@@ -10,9 +10,15 @@ export default function About() {
           <h3>Builder of Things. Breaker of Bugs.</h3>
           <p>
             I build interfaces that work and look like they mean it. Based in Coastal Bend, Texas,
-            I work in JavaScript and React, with an eye for design that comes from
+            I work in JavaScript, React, and CSS, with an eye for design that comes from
             years of living at the intersection of creative and technical. I find bugs everywhere I
             go. I can't turn it off. Turns out that's a skill.
+          </p>
+          <p>
+            That skill got its first real test this year, when I built and shipped a production
+            site for a paying client: migrating 300+ products into a new system, teaching him to
+            manage his own backend, and tracking down a shipping bug through to resolution. Turns
+            out fixing things and explaining them clearly is half the job.
           </p>
           <p>
             I work from home on a MacBook Air M4, with VS Code, GitHub, and too many browser tabs
@@ -32,7 +38,6 @@ export default function About() {
             <span className="project-tag">JavaScript</span>
             <span className="project-tag">React</span>
             <span className="project-tag">HTML/CSS</span>
-            <span className="project-tag">Git</span>
             <span className="project-tag">REST APIs</span>
             <span className="project-tag">Axios</span>
             <span className="project-tag">SQL</span>
