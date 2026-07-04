@@ -14,6 +14,11 @@ export default function Contact() {
             the big picture.
           </p>
           <p>
+            I built and handed off a production site for a non-technical client: migrating
+            300+ products, teaching him to manage his own backend, and tracking down a
+            shipping bug through to resolution.
+          </p>
+          <p>
             I'm currently open to freelance work and full-time opportunities — front-end
             focused, but happy to get my hands dirty across the stack.
           </p>
