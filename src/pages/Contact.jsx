@@ -23,7 +23,13 @@ export default function Contact() {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode(data),
     })
-      .then(() => setSubmitted(true))
+      .then((response) => {
+        if (response.ok) {
+          setSubmitted(true)
+        } else {
+          setError(true)
+        }
+      })
       .catch(() => setError(true))
   }
 
