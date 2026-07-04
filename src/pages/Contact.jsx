@@ -1,4 +1,32 @@
+import { useState } from 'react'
+
+function encode(data) {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
+
 export default function Contact() {
+  const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState(false)
+
+  // Netlify Forms only intercepts a real browser POST, but letting that happen
+  // natively reloads the whole SPA with no confirmation. Submitting via fetch
+  // keeps the app mounted so we can show a success/error state in its place.
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setError(false)
+    const data = Object.fromEntries(new FormData(e.target))
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode(data),
+    })
+      .then(() => setSubmitted(true))
+      .catch(() => setError(true))
+  }
+
   return (
     <main className="contact">
       <p className="page-breadcrumb">&gt; ping victoria</p>
@@ -27,22 +55,27 @@ export default function Contact() {
 
         <div className="contact-form-panel">
           <h2>Send me a message</h2>
-          <form name="contact" method="POST" data-netlify="true">
-            <input type="hidden" name="form-name" value="contact" />
-            <div className="form-field">
-              <label htmlFor="name">Name</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-            <div className="form-field">
-              <label htmlFor="email">Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div className="form-field">
-              <label htmlFor="message">Message</label>
-              <textarea id="message" name="message" rows={4} required />
-            </div>
-            <button type="submit">Send it →</button>
-          </form>
+          {submitted ? (
+            <p>Thanks for reaching out — I'll get back to you within 24 hours.</p>
+          ) : (
+            <form name="contact" onSubmit={handleSubmit} data-netlify="true">
+              <input type="hidden" name="form-name" value="contact" />
+              <div className="form-field">
+                <label htmlFor="name">Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div className="form-field">
+                <label htmlFor="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div className="form-field">
+                <label htmlFor="message">Message</label>
+                <textarea id="message" name="message" rows={4} required />
+              </div>
+              {error && <p>Something went wrong — please try again or email me directly.</p>}
+              <button type="submit">Send it →</button>
+            </form>
+          )}
         </div>
       </div>
 
