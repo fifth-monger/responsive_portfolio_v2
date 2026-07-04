@@ -1308,4 +1308,7 @@ html:has(.home-shell) {
   .nav-brand {
     font-size: 0.85rem;
   }
+  .home-stack {
+    margin-bottom: 1rem;
+  }
 }
