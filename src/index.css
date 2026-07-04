@@ -330,6 +330,39 @@ a:hover {
   }
 }
 
+/* ===== 4b. 404 PAGE ===== */
+
+.not-found {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem;
+  min-height: calc(100vh - 76px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.not-found h1 {
+  font-family: var(--font-mono);
+  margin-bottom: 1rem;
+}
+
+.not-found p {
+  margin-bottom: 1.5rem;
+}
+
+.not-found-link {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--accent);
+  width: fit-content;
+}
+
+.not-found-link:hover,
+.not-found-link:focus-visible {
+  text-decoration: underline;
+}
+
 /* ===== 5. ABOUT PAGE ===== */
 
 .about {
