@@ -1130,7 +1130,7 @@ nav.site-nav.home-nav {
   font-weight: 700;
   color: var(--home-phosphor-dim);
   white-space: nowrap;
-  margin-top: clamp(0.5rem, 2vw, 5rem);
+  margin-top: clamp(0.5rem, 5.56vw, 5rem);
 }
 
 .home-featured-label::after {
@@ -1264,31 +1264,6 @@ nav.site-nav.home-nav {
   }
 }
 
-/* ===== 13. HOME: SCROLL SNAP ===== */
-
-html:has(.home-shell) {
-  scroll-snap-type: y mandatory;
-}
-
-/* remove scroll-snap-align and scroll-snap-stop from .home-hero (or .home) */
-
-.site-nav.home-nav {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
-
-.home-stack {
-  scroll-snap-align: start;
-}
-
-.home-featured {
-  scroll-snap-align: start;
-}
-
-.site-footer.home-footer {
-  scroll-snap-align: end;
-}
-
 @media (max-width: 768px) {
   .about-grid, .contact-grid { grid-template-columns: 1fr; }
 }
@@ -1306,22 +1281,16 @@ html:has(.home-shell) {
   }
 }
 
-/* ===== 14. HOME: FULL-SLIDE SCROLL SNAP ===== */
+/* ===== 14. HOME: FULL-SLIDE SECTIONS ===== */
 
 /* 1. Parent Scroll Container setup
-   NOTE: scroll-snap-type lives on html (see section 13, html:has(.home-shell)).
    .home must NOT get its own height/overflow — the dusk-to-dawn gradient is
    painted on .app-shell.home-shell across its natural document height, and
    needs the whole page to scroll together. Giving .home a fixed 100dvh +
    overflow-y:auto turns it into an isolated scroll box, which decouples its
    content from .home-shell's box and freezes the gradient in place. */
 
-/* 2. Style sections to act as individual slides */
-/* No scroll-snap-align/stop here: .site-nav.home-nav is the snap point for this
-   slide (see section 13). Sizing hero to fill the rest of the viewport below the
-   nav means one snap (to the nav) shows nav + hero together with no partial gap,
-   instead of nav and hero being two separate snap stops ~76px apart that trap
-   the scroll when snapping back up. */
+/* 2. Hero fills the viewport below the nav */
 .home-hero {
   height: calc(100dvh - var(--nav-height));
   width: 100%;
@@ -1335,12 +1304,10 @@ html:has(.home-shell) {
   height: 100dvh;
   width: 100%;
   box-sizing: border-box;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow: hidden;/* Prevents skipping sections when scrolling fast */
+  overflow: hidden;
   padding: 0 2rem;
 }
 
