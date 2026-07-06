@@ -56,6 +56,7 @@ export default function Contact() {
             I'm currently open to freelance work and full-time opportunities — front-end
             focused, but happy to get my hands dirty across the stack.
           </p>
+          <p>If you're local to the Coastal Bend area and need hands-on tech support, feel free to reach out too.</p>
           <p>I reply within 24hrs.</p>
         </div>
 

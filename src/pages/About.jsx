@@ -7,28 +7,20 @@ export default function About() {
         <div className="about-intro">
           <p className="page-breadcrumb">&gt; cd ~/about</p>
           <h1>About <em className="serif-accent">Me</em></h1>
-          <h3>Builder of Things. Breaker of Bugs.</h3>
           <p>
-            I build interfaces that work and look like they mean it. Based in Coastal Bend, Texas,
-            I work in JavaScript, React, and CSS, with an eye for design that comes from
-            years of living at the intersection of creative and technical. I find bugs everywhere I
-            go. I can't turn it off. Turns out that's a skill.
+            I build interfaces in JavaScript, React, and CSS, based in Coastal Bend, Texas. Design has always come naturally to me, probably from years of living somewhere between creative work and technical work.
           </p>
           <p>
-            That skill got its first real test this year, when I built and shipped a production
-            site for a paying client: migrating 300+ products into a new system, teaching him to
-            manage his own backend, and tracking down a shipping bug through to resolution. Turns
-            out fixing things and explaining them clearly is half the job.
+          I notice bugs everywhere, in software, in workflows, in half-finished systems nobody's touched in years. It used to just feel like an annoying habit. Now it's the thing I actually get paid for.
           </p>
           <p>
-            I work from home on a MacBook Air M4, with VS Code, GitHub, and too many browser tabs
-            open at once.
+           This year I built and shipped a full production site for a paying client: migrated 300+ products into a new system, taught him how to manage his own backend, and tracked down a shipping bug all the way to the root cause.
           </p>
           <p>
-            ✦ Fun fact: I'm building a homestead in South Texas — chickens, garden, the whole
-            thing. Turns out ranching and coding have a lot in common: something is always broken
-            and you just have to figure it out.
+            Before that, I was the person every job pulled aside to fix the POS system or make sense of an Oracle NetSuite mess nobody else wanted to deal with. Troubleshooting under pressure isn't new to me, I've just started building the tools instead of only patching around them.
           </p>
+      
+          <p>✦ I'm also slowly building a homestead in South Texas, chickens, garden, the whole thing. One of the plants I grow is passionflower, an herb traditionally used to ease anxiety and support better sleep. It's become a small reminder to slow down, something that carries over into debugging more than you'd expect.</p>
         </div>
 
         <div className="about-sidebar">
