@@ -83,12 +83,13 @@ export default function Work() {
               <span className="project-tag">{project.stack}</span>
               <p className="project-description">{project.description}</p>
               <div className="project-links">
-                <a className="project-link" href={project.url} target="_blank" rel="noreferrer">
+                <a className="project-link-primary" href={project.url} target="_blank" rel="noreferrer">
                   {project.label}
                 </a>
+                <br />
                 {project.github && (
-                  <a className="project-link" href={project.github} target="_blank" rel="noreferrer">
-                    View code →
+                  <a className="project-link-source" href={project.github} target="_blank" rel="noreferrer">
+                    View code
                   </a>
                 )}
               </div>
