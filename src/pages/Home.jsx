@@ -58,7 +58,7 @@ export default function Home() {
           </div>
         </section>
         <article className="home-entry">
-          <p className="home-featured-label home-tone-light">Latest Work</p>
+          <p className="home-featured-label">Latest Work</p>
            <div className="home-entry-media">
             <span className="home-entry-date">06.2026</span>
             <img src="/images/hemingway.webp" alt="Hemingway Nursery Project" />
