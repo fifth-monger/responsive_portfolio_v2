@@ -885,7 +885,6 @@ nav.site-nav.home-nav {
 @media (max-width: 800px) {
   .terminal-body {
     padding: 1.5rem;
-    font-size: 1rem;
   }
   .terminal-title {
     font-size: 0.75rem;
@@ -957,14 +956,14 @@ nav.site-nav.home-nav {
 
 .home-hero-label {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: clamp(0.6rem, 2.5vw, 1rem);
   letter-spacing: 0.19em;
   color: var(--home-phosphor);
 }
 
 .home-hero-heading {
   font-family: var(--font-mono);
-  font-size: clamp(1.6rem, 3.5vw, 3rem);
+  font-size: clamp(1.3rem, 2.5vw, 3rem);
   line-height: 1.25;
   color: var(--home-phosphor);
   font-weight: 700;
@@ -983,7 +982,7 @@ nav.site-nav.home-nav {
 
 .home-hero-subtext {
   font-family: var(--font-mono);
-  font-size: 1.25rem;
+  font-size: clamp(.9rem, 2.5vw, 1.5rem);
   line-height: 1.75;
   color: var(--home-phosphor-dim);
   max-width: 50ch;
@@ -991,16 +990,16 @@ nav.site-nav.home-nav {
 
 .home-hero-actions {
   display: flex;
-  gap: 1rem;
+  gap: clamp(.8rem, 1vw, 1rem);
   flex-wrap: wrap;
   margin-top: 0.5rem;
 }
 
 .home-btn {
   font-family: var(--font-mono);
-  font-size: 1.20rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   font-weight: 700;
-  padding: 0.75rem 1.4rem;
+  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 3vw, 1.4rem);
   border-radius: 4px;
   transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
@@ -1131,7 +1130,7 @@ nav.site-nav.home-nav {
   font-weight: 700;
   color: var(--home-phosphor-dim);
   white-space: nowrap;
-  margin: 5rem 0 0
+  margin-top: clamp(0.5rem, 2vw, 5rem);
 }
 
 .home-featured-label::after {
