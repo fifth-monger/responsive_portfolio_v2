@@ -1183,13 +1183,13 @@ nav.site-nav.home-nav {
 }
 
 .home-entry-copy h3 {
-  font-size: 1.8rem;
+  font-size: clamp(1.5rem, 4vw, 1.8rem);
   color: var(--home-phosphor);
   margin-bottom: 0.85rem;
 }
 
 .home-entry-copy p {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 0.92rem + 0.33vw, 1.25rem);
   line-height: 1.8;
   color: var(--bg-nav);
   margin-bottom: 1.25rem;
