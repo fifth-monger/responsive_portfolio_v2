@@ -1382,7 +1382,7 @@ html:has(.home-shell) {
   flex-direction: column;
   justify-content: center;
   max-height: 100%;
-  overflow-y: auto; /* Allows only the text column to scroll if screen is tiny */
+  overflow-y: visible;
 }
 
 /* 4. Responsive Mobile Overrides */
